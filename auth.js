@@ -32,13 +32,14 @@
         
         var email = document.getElementById("email");
         var password = document.getElementById("password");
-        
         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
         promise.catch(e => alert(e.message));
-        
-        alert("Signed In as" +email.value)
-        // window.location.replace("index.html");
 
+    var user = firebase.auth().currentUser;
+        if (user) {
+                alert("Signed In as" +email.value)
+        window.location.replace("index.html");
+        } else { }
         
     }
     
@@ -63,8 +64,7 @@
             
         }else{
             
-            alert("No Active User");
-            //no user is signed in
+            alert("No Active User_b");
         }
         
         
