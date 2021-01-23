@@ -13,11 +13,6 @@
   firebase.initializeApp(firebaseConfig);
   
     const auth = firebase.auth();
-
-    function redirect() {
-                window.location.replace("index.html");
-    }
-    
     function signUp(){
         
         var email = document.getElementById("email");
@@ -27,7 +22,7 @@
         promise.catch(e => alert(e.message));
         
         alert("Signed Up");
-        window.location.replace("login.html");
+        // window.location.replace("login.html");
 
     }
     
@@ -42,7 +37,7 @@
         promise.catch(e => alert(e.message));
         
         alert("Signed In as" +email.value)
-        window.location.replace("index.html");
+        // window.location.replace("index.html");
 
         
     }
@@ -63,7 +58,7 @@
             
             var email = user.email;
             alert("Active User " + email);
-
+            // window.location.replace("index.html");
             //is signed in
             
         }else{
