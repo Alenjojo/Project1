@@ -6,7 +6,70 @@
 body {
   text-align: center;
   color: #fff;
+  cursor: cell;
 }
+/* cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+/*  */
 /* Navigation Bar */
 .wrapper {
   width: 1170px;
@@ -15,7 +78,7 @@ body {
 header {
   height: 100px;
   background: #262626;
-  width: 100%;
+  width: 70%;
   z-index: 10;
   position: fixed;
 }
@@ -34,6 +97,7 @@ header {
 nav {
   float: right;
   line-height: 100px;
+  margin-right: 5%;
 }
 nav a {
   text-decoration: none;
@@ -41,7 +105,7 @@ nav a {
   letter-spacing: 4px;
   font-size: 20px;
   margin: 0 10px;
-  color: #fff;
+  color: black;
 }
 /*  */
 .banner-area {
@@ -130,4 +194,3 @@ h1:nth-child(2) span {
   background: #ebebeb;
   height: 1500px;
 }
-
