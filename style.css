@@ -1,9 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   text-align: center;
+  color: #fff;
 }
 .wrapper {
   width: 1170px;
@@ -49,30 +51,41 @@ nav a {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
+  flex: 1;
 }
-.banner-area h2 {
-  padding-top: 8%;
+
+h1 {
+  padding-top: 9%;
   font-size: 70px;
   font-family: poppins;
-  text-transform: uppercase;
   color: #fff;
+  position: absolute;
+  left: 0%;
+  display: inline-block;
+}
+h1 span {
+  position: absolute;
+  left: 0;
+  top: 64%;
+  height: 36.5%;
+  width: 0%;
+  background-color: crimson;
+}
+@keyframes overlay {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
 }
 .content-area {
   width: 100%;
   position: relative;
-  top: 450px;
+  top: 780px;
+  color: #262626;
   background: #ebebeb;
   height: 1500px;
-}
-.content-area h2 {
-  font-family: poppins;
-  letter-spacing: 4px;
-  padding-top: 30px;
-  font-size: 40px;
-  margin: 0;
-}
-.content-area p {
-  padding: 2% 0px;
-  font-family: poppins;
-  line-height: 30px;
 }
